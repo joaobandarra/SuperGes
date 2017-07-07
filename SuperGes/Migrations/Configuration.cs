@@ -120,7 +120,6 @@ namespace SuperGes.Migrations
                new CarrinhoComprasProdutos  {IDcomprasProduto = 1, NomeProduto = "Saca Rolhas", Quantidade = 2, Preco = 5.00, IVA =0.23},
                new CarrinhoComprasProdutos {IDcomprasProduto = 2, NomeProduto = "Saca Rolhas", Quantidade = 2, Preco = 5.00, IVA =0.23}
 
-
             };
 
             carrinhocomprasprodutos.ForEach(cc => context.CarrinhoComprasProdutos.AddOrUpdate(c => c.IDcomprasProduto, cc));
