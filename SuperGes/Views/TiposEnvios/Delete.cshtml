@@ -1,0 +1,34 @@
+﻿@model SuperGes.Models.TiposEnvio
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Eliminar</h2>
+
+<h3>Tem a certeza de que quer eliminar este registo?</h3>
+<div>
+    <h4>TiposEnvio</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoEnvio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoEnvio)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-default" /> |
+            <div class="btn btn-default">
+                @Html.ActionLink("Voltar à lista", "Index")
+            </div>
+        </div>
+    }
+</div>

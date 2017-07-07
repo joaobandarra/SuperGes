@@ -1,0 +1,31 @@
+﻿@model SuperGes.Models.RegiaoEnvio
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>RegiaoEnvio</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeRegiao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomeRegiao)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <div class="btn btn-default">
+        @Html.ActionLink("Editar", "Edit", new { id = Model.IDRegiaoEnvio })
+    </div>
+    <b>|</b>
+    <div class="btn btn-default">
+        @Html.ActionLink("Voltar à lista", "Index")
+    </div>
+</p>

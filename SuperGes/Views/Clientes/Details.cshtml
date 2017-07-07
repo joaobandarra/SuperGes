@@ -1,0 +1,63 @@
+﻿@model SuperGes.Models.Cliente
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>Cliente</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Morada)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Morada)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InfoCartaoCredito)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InfoCartaoCredito)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NIF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NIF)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <div class="btn btn-default">
+        @Html.ActionLink("Editar", "Edit", new { id = Model.IDCliente })
+    </div>
+    <b>|</b>
+    <div class="btn btn-default">
+        @Html.ActionLink("Voltar à lista", "Index")
+    </div>
+</p>

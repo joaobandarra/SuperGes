@@ -1,0 +1,77 @@
+﻿@model IEnumerable<SuperGes.Models.Produto>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Produtos</h2>
+
+
+<br />
+@Html.Partial("../Shared/BarraLateralB")
+<br />
+
+<div class="btn btn-default">@Html.ActionLink("Criar novo", "Create", new { @class = "letraBotao" })</div>
+
+<div class="">
+                <table class="table">
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Nome)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Descricao)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Preco)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.IVA)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Fotografia)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Peso)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Stock)
+                        </th>
+                        <th></th>
+                    </tr>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Nome)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Descricao)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Preco)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.IVA)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Fotografia)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Peso)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Stock)
+                            </td>
+                            <td>
+                                <div class="btn btn-warning"> @Html.ActionLink("Editar", "Edit", new { id = item.IDProduto }, new { @class = "letraBotao" })</div>|
+                                <div class="btn btn-success"> @Html.ActionLink("Detalhes", "Details", new { id = item.IDProduto }, new { @class = "letraBotao" })</div>|
+                                <div class="btn btn-danger"> @Html.ActionLink("Eliminar", "Delete", new { id = item.IDProduto }, new { @class = "letraBotao" })</div>
+                                
+                            </td>
+                        </tr>
+                    }
+
+                </table>
+ </div>

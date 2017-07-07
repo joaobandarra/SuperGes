@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "Sobre Mim:";
+}
+<h2>@ViewBag.Title</h2>
+
+<!-- Situação onde se encontra no momento no servidor -->
+<div class="breadcrumbs">
+    <div class="container">
+        <ol class="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
+            <li><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Pagina Inicial</li>
+            <li class="active">Sobre</li>
+        </ol>
+    </div>
+</div>
+
+<br/>
+<div class="About-geral">
+    <div class="About-direita" > <!--style="text-align: right"-->
+        <img src="/Imagens/Outros/Eu.JPG" style="top:0px; right:0px; width:350px;" />
+    </div>
+    <div class="About-esquerda" style="text-align:left">
+        <p>Trabalho Elaborado por:</p>
+        <p>João Bandarra</p>
+        <p>Nº 17806</p>
+        <p>3º Ano de Licenciatura de Engenharia Informática</p>
+        <p>No Instituto Politécnico de Tomar</p>
+    </div>
+</div>
+
+
+<br />
+@Html.Partial("Outros")

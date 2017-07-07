@@ -29,5 +29,29 @@ namespace SuperGes.Models
         {
             return new ApplicationDbContext();
         }
+
+
+
+
+        //**********************************************************
+        //  informar a entity framework que as classes abaixo 
+        //  descritas devem ser associadas a uma base de dados
+        //**********************************************************
+        public virtual DbSet<Cliente> Clientes { get; set; }
+
+        public virtual DbSet<Encomenda> Encomendas { get; set; }
+
+        public virtual DbSet<CarrinhoCompras> CarrinhoCompras { get; set; }
+
+        public virtual DbSet<CarrinhoComprasProdutos> CarrinhoComprasProdutos { get; set; }
+
+        public virtual DbSet<Produto> Produtos { get; set; }
+
+        public virtual DbSet<EncomendaProduto> EncomendaProdutos { get; set; }
+
+        public virtual DbSet<TiposEnvio> TiposEnvio { get; set; }
+
+        public virtual DbSet<RegiaoEnvio> RegiaoEnvio { get; set; }
+
     }
 }

@@ -9,36 +9,137 @@
 
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-                @Html.Partial("_LoginPartial")
-            </div>
+    
+    <div class="navbar navbar-default navbar-static">
+        <!--Imagem Logo superGes-->
+        <div class="logo">
+            <img src="../Imagens/Logo/SuperGes(2).png" style="margin-left:30px; margin-top:10px;margin-top:10px;" />
         </div>
     </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
+        <div class="navbar navbar-default navbar-static">
+            <div class="container">
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+                <!--Inicio da navbar onde são criados os botões e a dropdown-->
+                <div class="navbar-header">
+
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".js-navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+
+                    </button>
+                    @Html.ActionLink("Pagina Inicial", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+
+                </div>
+
+
+
+                <div class="navbar-collapse collapse js-navbar-collapse">
+
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown dropdown-large">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Produtos <b class="caret"></b></a>
+
+                            <ul class="dropdown-menu dropdown-menu-large row">
+                                <li class="col-sm-3">
+                                    <ul>
+                                        <li class="dropdown-header">Frescos</li>
+                                        <li>@Html.ActionLink("Talho", "Talho", "Home")</li>
+                                        <li>@Html.ActionLink("Peixaria", "Peixaria", "Home")</li>
+                                        <li>@Html.ActionLink("Legumes", "Legumes", "Home")</li>
+                                        <li>@Html.ActionLink("Fruta", "Fruta", "Home")</li>
+                                        <li class="divider"></li>
+                                        <li class="dropdown-header">Mercearias</li>
+                                        <li class="disabled">@Html.ActionLink("Arroz e Massas", "ArrozMassa", "Home")</li>
+                                        <li>@Html.ActionLink("Feijão e Grão", "FeiGrao", "Home")</li>
+                                        <li class="disabled">@Html.ActionLink("Farinhas", "Farinhas", "Home")</li>
+                                        <li>@Html.ActionLink("Conservas", "Conservas", "Home")</li>
+                                        <li>@Html.ActionLink("Snacks", "Snacks", "Home")</li>
+                                        <li>@Html.ActionLink("Cereais", "Cereais", "Home")</li>
+                                    </ul>
+                                </li>
+                                <li class="col-sm-3">
+                                    <ul>
+                                        <li class="dropdown-header">Laticínios</li>
+                                        <li>@Html.ActionLink("Leite", "Leite", "Home")</li>
+                                        <li class="disabled">@Html.ActionLink("Natas, Bechamel e Chantilly", "NaBeCha", "Home")</li>
+                                        <li class="disabled">@Html.ActionLink("Manteigas e Cremes de Barrar", "ManCre", "Home")</li>
+                                        <li class="disabled">@Html.ActionLink("Ovos", "Ovos", "Home")</li>
+                                        <li class="disabled">@Html.ActionLink("Iogurtes", "Iogurtes", "Home")</li>
+                                        <li class="disabled">@Html.ActionLink("Queijos", "Queijos", "Home")</li>
+                                        <li class="divider"></li>
+                                        <li class="dropdown-header">Congelados</li>
+                                        <li class="disabled">@Html.ActionLink("Pizzas", "Pizzas", "Home")</li>
+                                        <li class="disabled">@Html.ActionLink("Gelados e Sobremesas", "GelSob", "Home")</li>
+                                        <li class="disabled">@Html.ActionLink("Peixe Congelado", "PeixCon", "Home")</li>
+                                        <li class="disabled">@Html.ActionLink("Carne Congelada", "CarnCon", "Home")</li>
+                                        <li class="disabled">@Html.ActionLink("Douradinhos, Crocantes e Nuggets", "DoCroNu", "Home")</li>
+                                        <li class="disabled">@Html.ActionLink("Vegetais e Fruta Congelada", "VegFru", "Home")</li>
+                                    </ul>
+                                </li>
+                                <li class="col-sm-3">
+                                    <ul>
+                                        <li class="dropdown-header">Higiene</li>
+                                        <li class="disabled">@Html.ActionLink("Higiene Oral", "HigOr", "Home")</li>
+                                        <li class="disabled">@Html.ActionLink("Higiene Íntima Feminina", "HigItFe", "Home")</li>
+                                        <li class="disabled">@Html.ActionLink("Cabelo", "Cabelo", "Home")</li>
+                                        <li class="disabled">@Html.ActionLink("Produtos de Banho", "ProBanh", "Home")</li>
+                                        <li class="disabled">@Html.ActionLink("Desodorizantes", "Desodorizantes", "Home")</li>
+                                        <li class="disabled">@Html.ActionLink("Papel Higiénico", "PapelHi", "Home")</li>
+                                        <li class="disabled">@Html.ActionLink("Lenços", "Lencos", "Home")</li>
+                                        <li class="divider"></li>
+                                        <li class="dropdown-header">Bebidas</li>
+                                        <li class="disabled">@Html.ActionLink("Água", "Agua", "Home")</li>
+                                        <li class="disabled">@Html.ActionLink("Néctares", "Nectares", "Home")</li>
+                                        <li class="disabled">@Html.ActionLink("Vinhos", "Vinhos", "Home")</li>
+                                        <li class="disabled">@Html.ActionLink("Refrigerantes", "Refrigerantes", "Home")</li>
+                                        <li class="disabled">@Html.ActionLink("Cerveja", "Cerveja", "Home")</li>
+                                        <li class="disabled">@Html.ActionLink("Licores, Whisky, Aguardente e Vodkas", "LiWhiAgVo", "Home")</li>
+                                    </ul>
+                                </li>
+                                <li class="col-sm-3">
+                                    <ul>
+                                        <li class="dropdown-header">Limpeza</li>
+                                        <li class="disabled">@Html.ActionLink("Liquidos, Detergentes e Amaciadores de Roupa", "Roupa", "Home")</li>
+                                        <li class="disabled">@Html.ActionLink("Liquidos e Detergentes da Loiça", "Loica", "Home")</li>
+                                        <li class="disabled">@Html.ActionLink("Limpeza da Casa", "LimpCasa", "Home")</li>
+                                        <li class="disabled">@Html.ActionLink("Ambientadores", "Ambientador", "Home")</li>
+                                        <li class="disabled">@Html.ActionLink("Inseticidas", "Inseticidas", "Home")</li>
+                                        <li class="divider"></li>
+                                        <li class="dropdown-header">Lazer</li>
+                                        <li><a href="#"></a></li>
+                                        <li class="disabled">@Html.ActionLink("Livros", "Livros", "Home")</li>
+                                        <li class="disabled">@Html.ActionLink("Jogos de Tabuleiro", "BoardGames", "Home")</li>
+                                        <li>@Html.ActionLink("Jogos de Vídeo", "Games", "Home")</li>
+                                        <li class="disabled">@Html.ActionLink("Consolas", "Consolas", "Home")</li>
+                                        <li>@Html.ActionLink("Brinquedos", "Brinquedos", "Home")</li>
+                                        <li class="disabled">@Html.ActionLink("Filmes DVD e BluRay", "Filmes", "Home")</li>
+                                        <li class="disabled">@Html.ActionLink("Cd's de Música", "Musicas", "Home")</li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                        </li>
+                        <li>@Html.ActionLink("Sobre", "SobreMim", "Home")</li>
+                        <li>@Html.ActionLink("Onde Estamos", "OndeEstamos", "Home")</li>
+
+                    </ul>
+                    @Html.Partial("_LoginPartial")
+                </div>
+            </div>
+        </div>
+        <div class="container body-content">
+            @RenderBody()
+            
+            <hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year - SuperGes</p>
+            </footer>
+        </div>
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
 </body>
 </html>

@@ -1,0 +1,42 @@
+﻿@model SuperGes.Models.CarrinhoCompras
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Eliminar</h2>
+
+<h3>Tem a certeza de que quer eliminar este registo?</h3>
+<div>
+    <h4>CarrinhoCompras</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Cliente.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cliente.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataAdicaoProduto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataAdicaoProduto)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-default" /> |
+            <div class="btn btn-default">
+                 @Html.ActionLink("Voltar à lista", "Index")
+            </div>
+        </div>
+    }
+</div>

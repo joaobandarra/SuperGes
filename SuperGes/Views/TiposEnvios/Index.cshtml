@@ -1,0 +1,38 @@
+﻿@model IEnumerable<SuperGes.Models.TiposEnvio>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Tipos de Envio</h2>
+
+<br />
+@Html.Partial("../Shared/BarraLateralB")
+<br />
+
+
+<p>
+    <div class="btn btn-default">@Html.ActionLink("Criar novo", "Create", new { @class = "letraBotao" })</div>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoEnvio)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoEnvio)
+        </td>
+        <td>
+            <div class="btn btn-warning"> @Html.ActionLink("Editar", "Edit", new { id = item.ID }, new { @class = "letraBotao" })</div>|
+            <div class="btn btn-success"> @Html.ActionLink("Detalhes", "Details", new { id = item.ID }, new { @class = "letraBotao" })</div>|
+            <div class="btn btn-danger"> @Html.ActionLink("Eliminar", "Delete", new { id = item.ID }, new { @class = "letraBotao" })</div>
+        </td>
+    </tr>
+}
+
+</table>

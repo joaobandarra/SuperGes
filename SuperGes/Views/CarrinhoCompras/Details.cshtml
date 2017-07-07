@@ -1,0 +1,40 @@
+﻿@model SuperGes.Models.CarrinhoCompras
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>CarrinhoCompras</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Cliente.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cliente.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataAdicaoProduto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataAdicaoProduto)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <div class="btn btn-default">
+        @Html.ActionLink("Editar", "Edit", new { id = Model.IDCarrinhoCompras })
+    </div>
+    <b>|</b>
+    <div class="btn btn-default">
+        @Html.ActionLink("Voltar à lista", "Index")
+    </div>
+
+</p>

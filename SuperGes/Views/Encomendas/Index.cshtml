@@ -1,0 +1,97 @@
+﻿@model IEnumerable<SuperGes.Models.Encomenda>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Encomendas</h2>
+
+
+<br />
+@Html.Partial("../Shared/BarraLateralB")
+<br />
+<p>
+    <div class="btn btn-default">@Html.ActionLink("Criar novo", "Create", new { @class = "letraBotao" })</div>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Cliente.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RegiaoEnvio.NomeRegiao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TiposEnvio.TipoEnvio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataCriacaoEncomenda)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataEnvioEncomenda)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EstadoCompra)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CustoEnvio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MoradaFaturacao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CodPostalFaturacao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MoradaEntrega)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CodigoPostalEntrega)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cliente.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RegiaoEnvio.NomeRegiao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TiposEnvio.TipoEnvio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataCriacaoEncomenda)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataEnvioEncomenda)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EstadoCompra)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustoEnvio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MoradaFaturacao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodPostalFaturacao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MoradaEntrega)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodigoPostalEntrega)
+        </td>
+        <td>
+            <div class="btn btn-warning"> @Html.ActionLink("Editar", "Edit", new { id = item.IDEncomenda }, new { @class = "letraBotao" })</div>|
+            <div class="btn btn-success"> @Html.ActionLink("Detalhes", "Details", new { id = item.IDEncomenda }, new { @class = "letraBotao" })</div>|
+            <div class="btn btn-danger"> @Html.ActionLink("Eliminar", "Delete", new { id = item.IDEncomenda }, new { @class = "letraBotao" })</div>
+        </td>
+    </tr>
+}
+
+</table>

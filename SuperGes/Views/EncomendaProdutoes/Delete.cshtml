@@ -1,0 +1,74 @@
+﻿@model SuperGes.Models.EncomendaProduto
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Eliminar</h2>
+
+<h3>Tem a certeza de que quer eliminar este registo?</h3>
+<div>
+    <h4>EncomendaProduto</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Encomenda.EstadoCompra)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Encomenda.EstadoCompra)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Produto.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Produto.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeProduto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomeProduto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantidade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quantidade)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Preco)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Preco)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IVA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IVA)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-default" /> |
+            <div class="btn btn-default">
+                @Html.ActionLink("Voltar à lista", "Index")
+            </div>
+        </div>
+    }
+</div>

@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewBag.Title = "Talho";
+}
+
+<h2>Talho</h2>
+
+
+<!-- Situação onde se encontra no momento no servidor -->
+<div class="breadcrumbs">
+    <div class="container">
+        <ol class="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
+            <li><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Pagina Inicial</li>
+            <li><span aria-hidden="True"></span>Produtos</li>
+            <li><span aria-hidden="True"></span>Frescos</li>
+            <li class="active">Talho</li>
+        </ol>
+    </div>
+</div>
+
+
+<div>
+
+    <div class="col-md-4 products-left">
+        <!--Carregamento da barra lateral-->
+        @Html.Partial("../Shared/BarraLateralC")
+    </div>
+    <div class="col-md-8 products-right">
+        <!--Carregamento da Barra de filtragem-->
+        @Html.Partial("../Shared/BarraFiltragensC")
+    </div>
+    <div class="col-md-4 top_brand_left">
+        <!--Carregamento da montra de produtos-->
+        @Html.Partial("../Shared/Montra")
+
+    </div>
+    
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,58 @@
+﻿@{
+    ViewBag.Title = "Localização";
+}
+
+<!--<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script src="js/jquery-1.11.1.min.js"></script>
+<link href="css/font-awesome.css" rel="stylesheet">
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    -->
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+
+<!-- Situação onde se encontra no momento no servidor -->
+<div class="breadcrumbs">
+    <div class="container">
+        <ol class="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
+            <li><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Pagina Inicial</li>
+            <li class="active">Onde Estamos</li>
+        </ol>
+    </div>
+</div>
+
+<div class="about">
+    <div class="w3_agileits_contact_grids">
+        <div class="col-md-6 w3_agileits_contact_grid_left">
+            <div class="agile_map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3074.1942038610346!2d-8.392851384606223!3d39.600307479468405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd187956a5d8cdb5%3A0x70374064acbb5e52!2sInstituto+Polit%C3%A9cnico+de+Tomar!5e0!3m2!1spt-PT!2spt!4v1499177173003" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="col-md-6 w3_agileits_contact_grid_right">
+            <h2 class="w3_agile_header">Deixa uma <span> Mensagem</span></h2>
+
+            <form action="#" method="post">
+                <span class="input input--ichiro">
+                    <input class="input__field input__field--ichiro" type="text" id="input-25" name="Name" placeholder=" " required="" />
+                    <label class="input__label input__label--ichiro" for="input-25">
+                        <span class="input__label-content input__label-content--ichiro">O Teu Nome</span>
+                    </label>
+                </span>
+                <span class="input input--ichiro">
+                    <input class="input__field input__field--ichiro" type="email" id="input-26" name="Email" placeholder=" " required="" />
+                    <label class="input__label input__label--ichiro" for="input-26">
+                        <span class="input__label-content input__label-content--ichiro">O Teu Email</span>
+                    </label>
+                </span>
+                <textarea name="Message" placeholder="Aqui a Tua Mensagem..." required=""></textarea>
+                <input type="submit" value="Submeter">
+            </form>
+        </div>
+        <div class="clearfix"> </div>
+    </div>
+</div>
+
+<br />
+@Html.Partial("Outros")

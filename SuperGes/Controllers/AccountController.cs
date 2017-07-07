@@ -15,6 +15,10 @@ namespace SuperGes.Controllers
     [Authorize]
     public class AccountController : Controller
     {
+        //Para Guardar Valores na Base de Dados
+        private ApplicationDbContext db = new ApplicationDbContext();
+
+
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
 
